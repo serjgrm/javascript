@@ -250,7 +250,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 },  //каким образом
                 body: JSON.stringify(object)  //что именно
             })
-            .then(data => data.text())
+            .then(data => data.text()) //модифицирует ответ 
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
@@ -260,7 +260,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }).finally(()=>{
                 form.reset();
             });
-
+            
         });
     }
     
@@ -287,4 +287,6 @@ window.addEventListener('DOMContentLoaded', function() {
         }, 4000);
     }
 
+
+    
 });
